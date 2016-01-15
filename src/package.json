@@ -6,18 +6,24 @@
   "author": "Alex Konidaris",
   "license": "?",
   "scripts": {
-    "start": "node app"
+    "start": "nodemon app",
+    "build": "grunt"
   },
   "dependencies": {
     "config": "^1.19.0",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "promise": "^7.1.1"
   },
   "devDependencies": {
+    "chai": "^3.4.1",
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "^0.11.3",
+    "grunt-mocha-test": "^0.12.7",
     "mocha": "^2.3.4",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "supertest": "^1.1.0"
   }
 }

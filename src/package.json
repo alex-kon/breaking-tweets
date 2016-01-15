@@ -1,0 +1,23 @@
+{
+  "name": "breaking-tweets",
+  "version": "0.0.1",
+  "description": "Display the latest 10 tweets from a given twitter handle",
+  "main": "app.js",
+  "author": "Alex Konidaris",
+  "license": "?",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "config": "^1.19.0",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "mocha": "^2.3.4",
+    "nodemon": "^1.8.1"
+  }
+}

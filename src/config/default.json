@@ -1,0 +1,5 @@
+{
+    "CNNBrkTweets" : {
+        "port" : "3000"
+    }
+}

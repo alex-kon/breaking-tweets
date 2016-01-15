@@ -1,5 +1,12 @@
 {
     "CNNBrkTweets" : {
         "port" : "3000"
+    },
+    "TwitterApi" : {
+        "ConsumerKey" : "U7KqWmOfdnR6wCgzQkqUOelNk",
+        "ConsumerSecret" : "XbgpGDzpoXAp4BQSRXIzBnrgZQgeicSJrWfYV1Wb0RQQ0IXyUj",
+        "AccessToken" : "411469738-PFs5rpXc6SJMX7ymaSreLM944JqE4M2qofkL7On5",
+        "AccessTokenSecret" : "UUCbzi01HjMl654YPR3ta1rzaJSwJgEERsBCa7uRmcyJd",
+        "NumberOfTweets" : 10
     }
 }

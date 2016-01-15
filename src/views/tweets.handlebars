@@ -1,0 +1,9 @@
+{{#each tweets}}
+
+  <blockquote class="tweet twitter-tweet">
+      <p>{{this.text}}</p>
+      <img src="{{this.user.profile_image_url}}" />
+      <span class="retweet">{{this.retweeted_status.created_at}}</span>
+  </blockquote>
+
+{{/each}}

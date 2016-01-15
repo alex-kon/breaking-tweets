@@ -1,14 +1,13 @@
 var requestService = require('../services/httpRequestService');
 
-module.exports.getTopTweets = function (request, response, next) {
-        response.send('ok');
-//    requestService.getTweets(request, response, next).then(parseRequest);
+module.exports.getTopTweets = function (request, response, next, client) {
+    requestService.getTweets(request, response, next, client).then(parseRequest);
  };
 
 function parseRequest (data) {
+    console.log('get');
     var processedData = processResponseData (data.body);
-    data.response.setHeader('Content-Type', 'application/json');
-    data.response.send(processedData);
+    data.response.render('tweets',{tweets : processedData});
 }
 
 function processResponseData (data) {

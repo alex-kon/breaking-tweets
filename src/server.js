@@ -1,21 +1,19 @@
 var express = require('express');
 var routes = require('./routes/routes');
 var routes = require('./routes/routes');
-var exphbs  = require('express-handlebars');
-
+var middleware = require('./middleware/middleware')
 
 module.exports = function (port) {
     var app = express();
 
-    app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-    app.set('view engine', 'handlebars');
-    app.use(express.static('assets'));
+    middleware(app);
 
-    app.listen(port, function () {
+    var expressApp = app.listen(port, function () {
       console.log(' app listening on port : ',port);
     });
 
     routes(app);
 
-    return app;
+    return expressApp;
 }
+

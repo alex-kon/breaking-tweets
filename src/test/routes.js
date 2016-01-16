@@ -1,12 +1,10 @@
-var assert = require('chai').assert;
 var server = require('../server');
 var request = require('supertest');
-
 var app;
 
 describe("main application", function () {
 
-  beforeEach(function() {
+  before(function() {
     app = server(3000);
   });
   describe("routes", function () {
@@ -19,6 +17,18 @@ describe("main application", function () {
           done();
         });
     });
+    it('/cnnbrk-tweets route should make a request to @cnnbrk handle', function (done) {
+      request(app)
+        .get('/cnnbrk-tweets')
+        .expect(200)
+        .end(function(err, res){
+          if (err) throw err;
+          done();
+        });
+    });
+  });
+  after(function(){
+    app.close();
   });
 });
 

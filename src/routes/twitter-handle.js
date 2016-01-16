@@ -10,6 +10,10 @@ var client = new Twitter({
 });
 
 module.exports = function (app) {
+    app.get('/cnnbrk-tweets', function (request, response, next) {
+        request.params.handle = 'cnnbrk';
+        twitterHandleController.getTopTweets(request, response, next, client);
+    });
     app.get('/:handle', function (request, response, next) {
         twitterHandleController.getTopTweets(request, response, next, client);
     });
